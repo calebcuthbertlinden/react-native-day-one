@@ -64,3 +64,8 @@ Inside (tabs)/_layout.tsx, add a Tabs component to define the bottom tab layout:
 ![alt text](<navigation.png>)
 
 ## Chapter 3 - Build a screen
+
+### Add image capabilities
+```
+npx expo install expo-image
+```
