@@ -105,4 +105,5 @@ setSelectedImage(result.assets[0].uri);
 ...
 ```
 
-## Chapter 5 - 
+## Chapter 5 - Emoji sticket
+Not much to say here, just custom component code and things
