@@ -69,3 +69,40 @@ Inside (tabs)/_layout.tsx, add a Tabs component to define the bottom tab layout:
 ```
 npx expo install expo-image
 ```
+
+### Create reusable components
+- Create components folder on the route level
+- Create `Button` and `ImageViewer` components
+
+### Update the (tabs)/index screen
+```
+<View style={styles.container}>
+    <View style={styles.imageContainer}>
+    <ImageViewer imgSource={PlaceholderImage} />
+    </View>
+    <View style={styles.footerContainer}>
+    <Button theme="primary" label="Choose a photo" />
+    <Button label="Use this photo" />
+    </View>
+</View>
+```
+
+## Chapter 4 - Image picker
+Here will use a custom expo component, nothing fancy
+```
+npx expo install expo-image-picker
+```
+
+We use it to select and image from the device, set [state](https://docs.expo.dev/tutorial/image-picker/#use-the-selected-image) and update the ImageViewer component to use that state
+```
+import { useState } from 'react';
+...
+const [selectedImage, setSelectedImage] = useState<string | undefined>(undefined);
+...
+setSelectedImage(result.assets[0].uri);
+...
+<ImageViewer imgSource={PlaceholderImage} selectedImage={selectedImage} />
+...
+```
+
+## Chapter 5 - 
